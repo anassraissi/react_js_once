@@ -4,6 +4,7 @@ import Wellcome1 from './wellcome';
 import List from './list';
 import Conditions from './condition';
 import Wellcome_as_class_component from './wellcome_as_class_component';
+import LifeCycleHook from './lifecyclehook';
 
 
   function Wellcome(props){
@@ -18,6 +19,8 @@ function App() {
         <Wellcome_as_class_component name="Raissi" lastname="Anass">Description</Wellcome_as_class_component>  
         <List></List>
         <Conditions></Conditions>
+        <hr></hr>
+        <LifeCycleHook></LifeCycleHook>
     </div>
     //props.children => Description if you want to show it
   );
