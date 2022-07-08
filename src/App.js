@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Wellcome1 from './wellcome';
 import List from './list';
+import Conditions from './condition';
 import Wellcome_as_class_component from './wellcome_as_class_component';
 
 
@@ -16,6 +17,7 @@ function App() {
         <Wellcome1 name="Raissi" lastname="Anass"></Wellcome1>
         <Wellcome_as_class_component name="Raissi" lastname="Anass">Description</Wellcome_as_class_component>  
         <List></List>
+        <Conditions></Conditions>
     </div>
     //props.children => Description if you want to show it
   );
