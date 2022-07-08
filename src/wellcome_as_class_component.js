@@ -21,7 +21,7 @@ class Wellcome_as_class_component extends Component{
        {this.setState({age:this.state.age-1})}  
     }
     update_name(event){
-        console.log(event.target.value);
+        console.log(event.target.value); //ayi haja tzadet fi text yjbadha hit ghankhadmo biha 
         const new_name=event.target.value;
         this.setState({
                 user:{
