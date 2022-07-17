@@ -14,21 +14,45 @@ function Conditions(props){
         afficher=<h1>You are poor man bro</h1>;
 
     }
-    let users=[
-        {id:1,name:'Anass',age:27},
-        {id:2,name:'marouane',age:26},
-        {id:3,name:'ALi',age:25}
-    ]
-        return <div>
-            <hr></hr>
-            {age>12 ? <div>you are older than 12</div> : <div>you are smaller than 12</div> } 
-            {age>22 ? <div>you are older than 22</div> : null } 
-            {afficher}
+
+    function Age(props){
+        
+        let age_template='';  
+
+            if(props.age>10){
+               age_template= <h1>you are older man</h1>
+            }
+            else{
+               age_template=<h1>You are yonger man</h1>
+
+            }
+            return age_template;
+            
+        
+        }
+           let users=[
+            {id:1,name:'Anass',age:27},
+            {id:2,name:'marouane',age:26},
+            {id:3,name:'ALi',age:25}
+        ];  
+        function User_list(props){
+            const user=props.user;
             <ul>
-            {users.map((users,index) => <li  key={users.id}>{index} : {users.name}</li>)}
+            {user.map((user,index)=><li key={user.id}> {index} :{user.name}</li>)}  
             </ul>
- 
-        </div>
+        }
+        
+            return <div>
+                <hr></hr> 
+                {afficher}
+              
+                <hr></hr>
+                <Age age={12}></Age>
+                <Age age={9}></Age>
+                <User_list user={users}></User_list>     
+            </div>
+    }
+  
    
-}
+
 export default Conditions;
